@@ -8,9 +8,9 @@ class MainRPSGame(Rockpaperscissorsgame):
         """
         Main function to run the game.
         """
-    # checking if the player age is not provided and then invites the player to enter there age. then enter into
-    # another if statement where if the player is under 8, they cant continue to the game otherwise continue to create
-    # a username and play the game.
+        # checking if the player age is not provided and then invites the player to enter there age. then enter into
+        # another if statement where if the player is under 8, they cant continue to the game otherwise continue to create
+        # a username and play the game.
         if self.player_age is None:
             age = int(input("Enter your age: "))
             if age < 8:
@@ -50,9 +50,24 @@ class MainRPSGame(Rockpaperscissorsgame):
         # who the winner is
 
 
+# Python checks if it's the main program (not being imported), creates an instance of the MainRPSGame class,
+# and then calls the main() method of that instance, which starts the Rock, Paper, Scissors game.
+# It encapsulates the game logic within a class and easily runs it when the script is executed directly.
 # Main block used to create an instance of MainRPSGame and run the game
-if __name__ == "__main__":
-    # Creating an instance of MainRPSGame
+if __name__ == "__main__":  # This condition checks if the script is being run directly by the Python interpreter
+    # (as opposed to being imported as a module in another script).
+    # Python sets the special variable __name__ to "__main__" in the scope of that script.
+    # So, the if __name__ == "__main__":
+    # block allows you to execute certain code only when the script is run directly,
+    # not when it's imported into another script.
     game = MainRPSGame()
-    # Calling the main method to start the game
+    # Creates an instance of the MainRPSGame class called game
+    # In OOP a class serves as a blueprint for creating objects (instances).
+    # MainRPSGame is the class, and game is the object (instance) created from that class.
+    # creating an instance of the MainRPSGame class allows you to utilise its functionality, isolate its behaviour and
+    # state, customise its initial state, and adhere to object-oriented programming principles.
     game.main()
+    # calls the main() method of the game object.
+    # In Python, a method is a function that belongs to a class.
+    # main() is a method defined within the MainRPSGame class.
+    # By calling game.main(), you're executing the code inside the main() method of the MainRPSGame class.
